@@ -1,0 +1,6 @@
+if BOARD_E73_HANDPAD40_UF2
+
+config BOARD
+    default "e73_handpad40_uf2"
+
+endif # BOARD_E73_HANDPAD40_UF2

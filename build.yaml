@@ -1,0 +1,7 @@
+include:
+    - board: e73_handpad40
+      shield: handpad20
+    - board: e73_handpad40_uf2
+      shield: handpad20
+    - board: nice_nano_v2
+      shield: handpad20

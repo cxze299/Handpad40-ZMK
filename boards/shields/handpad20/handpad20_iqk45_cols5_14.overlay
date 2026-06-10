@@ -1,0 +1,51 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+        zmk,matrix_transform = &default_transform;
+    };
+
+    kscan0: kscan {
+        compatible = "zmk,kscan-gpio-matrix";
+        label = "KSCAN";
+
+        diode-direction = "col2row";
+        wakeup-source;
+
+        col-gpios = <&gpio0 26 GPIO_ACTIVE_HIGH>,  /* COL1 */
+                    <&gpio0 30 GPIO_ACTIVE_HIGH>,  /* COL2 */
+                    <&gpio0 31 GPIO_ACTIVE_HIGH>,  /* COL3 */
+                    <&gpio0 29 GPIO_ACTIVE_HIGH>,  /* COL4 */
+                    <&gpio0 12 GPIO_ACTIVE_HIGH>,  /* COL5 */
+                    <&gpio0 7 GPIO_ACTIVE_HIGH>,   /* COL6 */
+                    <&gpio0 17 GPIO_ACTIVE_HIGH>,  /* COL7 */
+                    <&gpio0 20 GPIO_ACTIVE_HIGH>,  /* COL8 */
+                    <&gpio0 13 GPIO_ACTIVE_HIGH>,  /* COL9 */
+                    <&gpio0 22 GPIO_ACTIVE_HIGH>,  /* COL10 */
+                    <&gpio0 24 GPIO_ACTIVE_HIGH>,  /* COL11 */
+                    <&gpio1 0 GPIO_ACTIVE_HIGH>,   /* COL12 */
+                    <&gpio1 4 GPIO_ACTIVE_HIGH>,   /* COL13 */
+                    <&gpio0 9 GPIO_ACTIVE_HIGH>,   /* COL14 */
+                    <&gpio1 6 GPIO_ACTIVE_HIGH>,   /* COL15 */
+                    <&gpio0 10 GPIO_ACTIVE_HIGH>;  /* COL16 */
+
+        row-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,  /* ROW1 */
+                    <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, /* ROW2 */
+                    <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, /* ROW3 */
+                    <&gpio0 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;  /* ROW4 */
+    };
+
+    default_transform: keymap_transform0 {
+        compatible = "zmk,matrix-transform";
+        columns = <16>;
+        rows = <4>;
+
+        map = <
+            RC(0,4) RC(0,5) RC(0,6) RC(0,7) RC(0,8) RC(0,9) RC(0,10) RC(0,11) RC(0,12) RC(0,13)
+            RC(1,4) RC(1,5) RC(1,6) RC(1,7) RC(1,8) RC(1,9) RC(1,10) RC(1,11) RC(1,12) RC(1,13)
+            RC(2,4) RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,9) RC(2,10) RC(2,11) RC(2,12) RC(2,13)
+            RC(3,4) RC(3,5) RC(3,6) RC(3,7) RC(3,8) RC(3,9) RC(3,10) RC(3,11) RC(3,12) RC(3,13)
+        >;
+    };
+};

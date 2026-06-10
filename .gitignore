@@ -1,0 +1,27 @@
+# Local ZMK workspace and toolchains
+zmk-work/
+zephyr-sdk/
+.downloads/
+tools/
+git-safe-config
+
+# Build outputs
+firmware/
+build/
+*.uf2
+*.hex
+*.bin
+*.elf
+*.map
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local logs and caches
+*.log
+__pycache__/
+.pytest_cache/

@@ -1,0 +1,3 @@
+config BOARD_E73_HANDPAD40_UF2
+    bool "E73 Handpad40 UF2"
+    depends on SOC_NRF52840_QIAA

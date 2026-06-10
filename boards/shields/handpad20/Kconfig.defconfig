@@ -1,0 +1,6 @@
+if SHIELD_HANDPAD20
+
+config ZMK_KEYBOARD_NAME
+    default "Cxze.Pad"
+
+endif

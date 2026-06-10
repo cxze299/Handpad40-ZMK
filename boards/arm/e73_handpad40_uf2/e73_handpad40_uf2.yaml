@@ -1,0 +1,10 @@
+identifier: e73_handpad40_uf2
+name: E73 Handpad40 UF2
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+supported:
+  - usb_device
+  - gpio
