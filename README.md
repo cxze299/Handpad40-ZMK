@@ -1,6 +1,6 @@
-# Handpad20 ZMK Firmware
+# Handpad40 ZMK Firmware
 
-Handpad20 是一套面向 E73/nRF52840 自制 4x10 键盘的 ZMK 固件。
+Handpad40 是一套面向 E73/nRF52840 自制 4x10 键盘的 ZMK 固件。
 
 支持 USB、蓝牙、ZMK Studio、Office/Game 布局、UF2 更新和 J-Link/SWD
 裸烧。硬件接线、键位和使用说明见 [README_CN.md](README_CN.md)。
